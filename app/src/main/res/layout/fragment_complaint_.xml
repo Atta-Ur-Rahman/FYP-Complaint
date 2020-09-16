@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:id="@+id/ll_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.attaurrahman.e_complaint.fragment.Complaint_Fragment">
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="#100000"
+         android:orientation="horizontal"
+        android:gravity="center">
+
+         <ImageView
+             android:id="@+id/iv_zoom"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/zoom"
+             />
+         <ImageView
+             android:id="@+id/iv_delete"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/delete"
+             android:layout_marginLeft="40dp"
+             android:layout_marginRight="40dp"/>
+         <ImageView
+             android:id="@+id/iv_rotate"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/rotate"/>
+     </LinearLayout>-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/tb_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="#FFFFFF">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_title_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:src="@mipmap/image" />
+
+                    <ImageView
+                        android:id="@+id/iv_logout"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="25dp"
+                        android:src="@drawable/logout" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_ecomplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/complaint"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textAlignment="center" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="@color/arrow" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_dots"
+                        android:layout_marginTop="20dp"
+                        android:cursorVisible="false"
+                        android:focusable="false" />
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        app:ms_arrowColor="@color/arrow" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textStyle="bold"
+                    android:textColor="#b4bfbf"
+                    android:paddingLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <FrameLayout
+                        android:id="@+id/fl_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_get_pic_cam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            android:animateLayoutChanges="true"
+                            android:layout_gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/iv_pic_cam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/cam"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center"
+                            android:animateLayoutChanges="true" />
+
+                        <ImageView
+                            android:id="@+id/iv_pic_cross"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="45dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/delete"
+                            android:layout_gravity="right"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textColor="#b4bfbf"
+                    android:textColorHint="#b4bfbf"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/description_or_link"
+                    android:background="@drawable/et_dots"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:imeOptions="actionSend"
+                    android:focusable="false" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_complaint_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/button"
+                        android:layout_gravity="center"
+                        android:text="SUBMIT"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="30dp" />
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
